@@ -6,6 +6,14 @@ const string PasswordCheckValue = "hi";
 
 Console.WriteLine("Hello, World!");
 
+Console.WriteLine("Here is a cryptographically secure, 16-character, randomly generated password in case you need it:");
+for (int i = 0; i < 16; i++)
+{
+    char c = (char)RandomNumberGenerator.GetInt32(32, 127);
+    Console.Write(c);
+}
+Console.WriteLine();
+
 string currentPath = Directory.GetCurrentDirectory();
 string plaintextPath = $@"{currentPath}\plaintext";
 string ciphertextPath = $@"{currentPath}\ciphertext";
